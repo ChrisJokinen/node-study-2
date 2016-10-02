@@ -30,5 +30,8 @@
   "bugs": {
     "url": "https://github.com/ChrisJokinen/node-study-2/issues"
   },
-  "homepage": "https://github.com/ChrisJokinen/node-study-2#readme"
+  "homepage": "https://github.com/ChrisJokinen/node-study-2#readme",
+  "dependencies": {
+    "http": "0.0.0"
+  }
 }
