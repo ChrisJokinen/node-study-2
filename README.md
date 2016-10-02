@@ -80,7 +80,8 @@ server.listen(config.http.port);
   2. On this page you will see and "Open Pull Request" and it is comparing the feature branh against the master branch. You should see a message stating if the feature branch can be merged into the master branch without any conflicts being created! Scroll down a little bit and just below the "create pull request" button you will see the 2 commits we did ("added http module", "added code to project for http, with no config") localy and pushed up together. Now just a little bit farther down you can review the actual code changes that have been made. This gives you a chance to review the changes without having to look at the entire code base. You can also spot things that should never be published like config files, debug code, etc...
   3. once you are done you can create a pull request.
   4. If you have permission to can then review any open merge request and approve the merge back into the master branch.
-  5 After that you can delete the feature branch, back in your local you will need to switch back to the master branch and pull/sync your master with git hub.
+  5. After that you can delete the feature branch, back in your local you will need to switch back to the master branch and pull/sync your master with git hub. Since all of your changes where made in a feature branch your local master does not have them, so sync up.
+  6. If all the members of your team preform the workflow you project should be able to handle multiple developers writing code and not deleting or overwrite someones work. Each member should be working on different feature branch and so some may want to add a name to the branch naming.
 
 
 
