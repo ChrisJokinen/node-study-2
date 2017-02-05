@@ -28,38 +28,37 @@ In my 1st tutorial I covered commiting and pushing your code to github using the
   ![Screenshot 2](https://github.com//ChrisJokinen/node-study-2/blob/master/imgs/ss2.png?raw=true).<br>
   Now when you look at the top left creach branch button you will see the new branch name presented. It is very important you remain aware of what branch you are on before working on any code. You can avoid a lot of headaches if you do.
 3. Make a new file in the root directory of your project called, "config.js". Then add the following code. The code below can be replaced with the actual connection values for your database. Exports and module.exports are something you will see a lot of in nodejs code. You can think of this as an include file that is common in many programming languages.
-```javascript
-exports.mysql = {
-  host: "localhost",
-  user: "mysql-user",
-  password: "mysql-user-password",
-  database: "database-name",
-  port: 3306
-
-}
-```
+    ```javascript
+    exports.mysql = {
+      host: "localhost",
+      user: "mysql-user",
+      password: "mysql-user-password",
+      database: "database-name",
+      port: 3306
+    }
+    ```
 4. Now lets add a little more code to our config file. This code will allow you to set a specific port port your http server will listen on for request of content on your server. The other point I want to make is that you can have more than one exports JSON object in the same file. Save your changes once done.
-```javascript
-exports.https = {
-  port: 8888
-}
-```
+    ```javascript
+    exports.https = {
+      port: 8888
+    }
+    ```
 5. now open the git shell
   1. navigate to the project folder. For my system I enter "cd C:\nodejs\node-study-2"
   2. download http from npm. My command is "npm install http --save". The "--save" part of the command will update your package.json with the http dependancy reference.
 6. Next we add a new file; "index.js" and add the following code. A few things to note here, starting with the 2 require calls. require is used to pulling modules and also your own code. In the first we require the module http we installed with the npm install command. The second requires our config file. See the difference between the module and the custom file? npm modules are just called by name where our config file is called as a local reference and includes the file extension. After assigning the config file to the variable config we now have access to the 2 JSON objects defined in the config file. When we use the http port we use dot notation to access it in the server.listen(). Save index.js
-```javascript
-var http = require("http");
-var config = require("./config.js");
+    ```javascript
+    var http = require("http");
+    var config = require("./config.js");
+    
+    var requestListener = function (req, res) {
+      res.writeHead(200);
+      res.end("Hello, World!\n");
+    }
 
-var requestListener = function (req, res) {
-  res.writeHead(200);
-  res.end("Hello, World!\n");
-}
-
-var server = http.createServer(requestListener);
-server.listen(config.http.port);
-```
+    var server = http.createServer(requestListener);
+    server.listen(config.http.port);
+    ```
 7. Start the http server. In git console and inside the project folder use this command to start the http server, "node index.js". when it runs you will not see anything other than the command prompt does not return...the http server will be running now.
 8. Test the server by opening a web browser and entering either "localhost:8888" or "127.0.0.1:8888". you should see "Hello, World!" on the page. Note I had an issue with the Edge Browser, so try in Google Chrome or Firefox.
 9. Shut the http server down. Back in the git console, press the keys "CTRL+c" to stop the http server and return the command prompt.
