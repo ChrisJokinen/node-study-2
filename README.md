@@ -65,24 +65,24 @@ server.listen(config.http.port);
 9. Shut the http server down. Back in the git console, press the keys "CTRL+c" to stop the http server and return the command prompt.
 10. now we can commit and push our changes, but first the security minded of you may have an alarm going off. We have a config file with our database settings in this code. Meet your friend .gitignore. In Git Desktop right click on the config.js file and select the ignore file. Doing this removes the file from tracking by git. You can do this for files or entire directories. A new file will be added called ".gitignore". 
 11. Lets say our code is done and we need to push these changes to github so others can pull our work down. Return to the Git Desktop and all you need to do is:
-...1. make sure all your files are saved
-...2. you are in the feature branch and not in master
-...3. uncheck all the files list in the list of changes you have made.
-...4. select the file marked "node_modules\http\..."
-...5. in the summary field below enter "Added http module"
-...6. Click the Commit button
-...7. select the rest of the files, except for "config.js".
-...8. below in the summary field enter "added code to project for http, with no config"
-...9. click the commit button
-...10. press the publish button, should be where the sync button usually is on the top right.
+  1. make sure all your files are saved
+  2. you are in the feature branch and not in master
+  3. uncheck all the files list in the list of changes you have made.
+  4. select the file marked "node_modules\http\..."
+  5. in the summary field below enter "Added http module"
+  6. Click the Commit button
+  7. select the rest of the files, except for "config.js".
+  8. below in the summary field enter "added code to project for http, with no config"
+  9. click the commit button
+  10. press the publish button, should be where the sync button usually is on the top right.
 12. open your github account and go to the project you are working on.
 ![Screenshot 3](https://github.com//ChrisJokinen/node-study-2/blob/master/imgs/ss3.png?raw=true).<br>
-...1. once you are on the project page you will see a new section displayed directly above the branch name and clone/download button. This section states there is a recent published branch and presents you witha "compare & pull request" button. Click it.
-...2. On this page you will see and "Open Pull Request" and it is comparing the feature branh against the master branch. You should see a message stating if the feature branch can be merged into the master branch without any conflicts being created! Scroll down a little bit and just below the "create pull request" button you will see the 2 commits we did ("added http module", "added code to project for http, with no config") localy and pushed up together. Now just a little bit farther down you can review the actual code changes that have been made. This gives you a chance to review the changes without having to look at the entire code base. You can also spot things that should never be published like config files, debug code, etc...
-...3. once you are done you can create a pull request.
-...4. If you have permission to can then review any open merge request and approve the merge back into the master branch.
-...5. After that you can delete the feature branch, back in your local you will need to switch back to the master branch and pull/sync your master with git hub. Since all of your changes where made in a feature branch your local master does not have them, so sync up.
-...6. If all the members of your team preform this workflow the project should be able to handle multiple developers pushing code to the repo and not deleting or overwrite work. Also each member should be working on a different feature branch and so it may worth using a contributers name with the branch naming. For example, my typo feature branch could be named cj_typo, or even cj_typo_2017-02-02. Another example might include feature branch name that reference bug patches for your code so, maybe cj_hotfix_123.
+  1. once you are on the project page you will see a new section displayed directly above the branch name and clone/download button. This section states there is a recent published branch and presents you witha "compare & pull request" button. Click it.
+  2. On this page you will see and "Open Pull Request" and it is comparing the feature branh against the master branch. You should see a message stating if the feature branch can be merged into the master branch without any conflicts being created! Scroll down a little bit and just below the "create pull request" button you will see the 2 commits we did ("added http module", "added code to project for http, with no config") localy and pushed up together. Now just a little bit farther down you can review the actual code changes that have been made. This gives you a chance to review the changes without having to look at the entire code base. You can also spot things that should never be published like config files, debug code, etc...
+  3. once you are done you can create a pull request.
+  4. If you have permission to can then review any open merge request and approve the merge back into the master branch.
+  5. After that you can delete the feature branch, back in your local you will need to switch back to the master branch and pull/sync your master with git hub. Since all of your changes where made in a feature branch your local master does not have them, so sync up.
+  6. If all the members of your team preform this workflow the project should be able to handle multiple developers pushing code to the repo and not deleting or overwrite work. Also each member should be working on a different feature branch and so it may worth using a contributers name with the branch naming. For example, my typo feature branch could be named cj_typo, or even cj_typo_2017-02-02. Another example might include feature branch name that reference bug patches for your code so, maybe cj_hotfix_123.
 
 
 
