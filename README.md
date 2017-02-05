@@ -28,7 +28,6 @@ In my 1st tutorial I covered commiting and pushing your code to github using the
   ![Screenshot 2](https://github.com//ChrisJokinen/node-study-2/blob/master/imgs/ss2.png?raw=true).<br>
   Now when you look at the top left creach branch button you will see the new branch name presented. It is very important you remain aware of what branch you are on before working on any code. You can avoid a lot of headaches if you do.
 3. Make a new file in the root directory of your project called, "config.js". Then add the following code. The code below can be replaced with the actual connection values for your database. Exports and module.exports are something you will see a lot of in nodejs code. You can think of this as an include file that is common in many programming languages.
-
 ```javascript
 exports.mysql = {
   host: "localhost",
@@ -57,10 +56,10 @@ var requestListener = function (req, res) {
   res.writeHead(200);
   res.end("Hello, World!\n");
 }
-```
 
 var server = http.createServer(requestListener);
 server.listen(config.http.port);
+```
 7. Start the http server. In git console and inside the project folder use this command to start the http server, "node index.js". when it runs you will not see anything other than the command prompt does not return...the http server will be running now.
 8. Test the server by opening a web browser and entering either "localhost:8888" or "127.0.0.1:8888". you should see "Hello, World!" on the page. Note I had an issue with the Edge Browser, so try in Google Chrome or Firefox.
 9. Shut the http server down. Back in the git console, press the keys "CTRL+c" to stop the http server and return the command prompt.
