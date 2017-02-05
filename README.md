@@ -27,8 +27,9 @@ In my 1st tutorial I covered commiting and pushing your code to github using the
   2. click "Create new branch".<br>
   ![Screenshot 2](https://github.com//ChrisJokinen/node-study-2/blob/master/imgs/ss2.png?raw=true).<br>
   Now when you look at the top left creach branch button you will see the new branch name presented. It is very important you remain aware of what branch you are on before working on any code. You can avoid a lot of headaches if you do.
-3. Make a new file in the root directory of your project called, "config.js". Then add the following code. The code below can be replaced with the actual connection values for your database. Exports and module.exports are something you will see a lot of in nodejs code. You can think of this as an include file that is common in many programming languages.
+3. Make a new file in the root directory of your project called, "config.js". Then add the following code. The code below can be replaced with the actual connection values for your database. Exports and module.exports are something you will see a lot of in nodejs code. You can think of this as an include file that is common in many programming languages. 
   ```javascript
+  
   exports.mysql = {
     host: "localhost",
     user: "mysql-user",
@@ -37,8 +38,9 @@ In my 1st tutorial I covered commiting and pushing your code to github using the
     port: 3306
   }
   ```
-4. Now lets add a little more code to our config file. This code will allow you to set a specific port port your http server will listen on for request of content on your server. The other point I want to make is that you can have more than one exports JSON object in the same file. Save your changes once done.
+4. Now lets add a little more code to our config file. This code will allow you to set a specific port port your http server will listen on for request of content on your server. The other point I want to make is that you can have more than one exports JSON object in the same file. Save your changes once done. 
   ```javascript
+  
   exports.https = {
     port: 8888
   }
