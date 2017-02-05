@@ -36,14 +36,12 @@ exports.mysql = {
   database: "database-name",
   port: 3306
 
-}
-```
+}```
 4. Now lets add a little more code to our config file. This code will allow you to set a specific port port your http server will listen on for request of content on your server. The other point I want to make is that you can have more than one exports JSON object in the same file. Save your changes once done.
 ```javascript
 exports.https = {
   port: 8888
-}
-```
+}```
 5. now open the git shell
   1. navigate to the project folder. For my system I enter "cd C:\nodejs\node-study-2"
   2. download http from npm. My command is "npm install http --save". The "--save" part of the command will update your package.json with the http dependancy reference.
@@ -58,8 +56,7 @@ var requestListener = function (req, res) {
 }
 
 var server = http.createServer(requestListener);
-server.listen(config.http.port);
-```
+server.listen(config.http.port);```
 7. Start the http server. In git console and inside the project folder use this command to start the http server, "node index.js". when it runs you will not see anything other than the command prompt does not return...the http server will be running now.
 8. Test the server by opening a web browser and entering either "localhost:8888" or "127.0.0.1:8888". you should see "Hello, World!" on the page. Note I had an issue with the Edge Browser, so try in Google Chrome or Firefox.
 9. Shut the http server down. Back in the git console, press the keys "CTRL+c" to stop the http server and return the command prompt.
